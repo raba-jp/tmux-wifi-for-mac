@@ -13,11 +13,11 @@ do_interpolation() {
 	local rate_string="#(${source_path}/scripts/rate.sh)"
 	local strength_string="#(${source_path}/scripts/strength.sh)"
 
-	local interpolated="${string/${interpolation_ssid_string}/${ssid_string}}"
-	local interpolated="${string/${interpolation_rate_string}/${rate_string}}"
-	local interpolated="${string/${interpolation_strength_string}/${strength_string}}"
+	local string="${string/${interpolation_ssid_string}/${ssid_string}}"
+	local string="${string/${interpolation_rate_string}/${rate_string}}"
+	local string="${string/${interpolation_strength_string}/${strength_string}}"
 
-	printf %s "$interpolated"
+	printf %s "${string}"
 }
 
 main() {
