@@ -6,7 +6,7 @@ source "${source_path}/common.sh"
 get_ssid() {
 	[ `is_mac_os` = 'false' ] && return 0
 	local info=(`get_airport_info`)
-	echo "#[underscore]${info[3]}#[default]"
+	echo "${info[3]}"
 }
 
 get_ssid
